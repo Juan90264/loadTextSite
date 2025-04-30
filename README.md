@@ -53,7 +53,7 @@ A button to start reading and fields for input and display
 
 ### 📄 Example of usage in an HTML page:
 
-In the "loadTextSite.html" file, there is an example of use, which is the source code of the tool page mentioned at the beginning, which has a comment indicating the elements necessary to run the script correctly.
+In the "index.html" file, there is an example of use, which is the source code of the tool page mentioned at the beginning, which has a comment indicating the elements necessary to run the script correctly.
 
 ## 🛡️ Limitations
 Using iframe fails on sites with X-Frame-Options: DENY/SAMEORIGIN.
