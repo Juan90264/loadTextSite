@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Juan90264 - LoadTextSite</title>
+   <meta name="description" content="Portfolio">
+   <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="author" content="Juan90264">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style.css" />
+
+   <link rel="stylesheet" href="../styleLoadTextSite.css" /> <!-- Code styling, necessary to put -->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+   <script>
+      var oldScrollY = window.scrollY + 400;
+      window.onscroll = function(e) {
+        if(oldScrollY < window.scrollY){
+           $(".DIV-MENU").addClass("fixed");
+        } else {
+           $(".DIV-MENU").removeClass("fixed");
+        }
+        oldScrollY = window.scrollY;
+      }
+   </script>
+   <style>
+.DIV-PAGE-CODE- {
+    width: auto;
+    margin-top: 128px;
+    background: #dfdfdf;
+    word-break: break-word;
+}
+
+#output {
+    white-space: pre-wrap;
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 21px;
+}
+
+input#url-input {
+    width: 500px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 8px;
+    outline: 0;
+    font-size: 21px;
+    border: 1px solid #000;
+}
+
+.DIV-INPUT {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.DIV-INPUT > h1 {
+    font-family: Montserrat;
+    font-size: 41px;
+}
+
+.DIV-INPUT > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button#load-btn {
+    width: 120px;
+    height: 50px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 14px;
+    border: 1px solid #000;
+    outline: 0;
+}
+
+button#load-btn:hover {
+    background: #d9d9d9;
+    transition: 0.5s;
+}        
+
+#status {
+    color: #777;
+    margin-top: 5px;
+    font-family: Montserrat;
+    font-size: 21px;
+}
+   </style>
+</head>
+<body>
+   <div class="DIV-MENU">
+      <div class="DIV-MENU-LOGO"><a href="../index.html">JUAN90264</a></div>
+      <div class="DIV-MENU-MOBILE">
+         <button class="DIV-MENU-MOBILE-BUTTON">
+            <img src="https://www.svgrepo.com/show/509382/menu.svg" />
+         </button>
+      </div>
+      <div class="DIV-MENU-">
+         <ul>
+           <li><a href="../codes.html">Códigos</a></li>
+           <li><a href="../license.html">Licença</a></li>
+         </ul>
+      </div>
+      <div class="DIV-MENU-IDIOMAS" id="DIV-MENU-IDIOMAS">
+        <select id="language-select">
+           <option value="pt">Português</option>
+           <option value="en">English</option>
+        </select>
+      </div>
+   </div>
+   <div class="DIV-MENU-MOBILE-">
+      <div>
+         <ul>
+            <li><a href="../codes.html">Códigos</a></li>
+            <li><a href="../license.html">Licença</a></li> 
+         </ul>
+      </div>
+   </div>
+   <div class="DIV-PAGE-CODE-">
+      <div class="DIV-INPUT"> <!-- Div that will run the tool, necessary to place -->
+         <h1>LoadTextSite</h1><br>
+         <div>
+            <input type="text" id="url-input" placeholder="Digite a URL aqui">
+            <button id="load-btn">Carregar Texto</button>
+         </div>
+      </div>
+      <div id="status"></div> <!-- Div that will run the tool, necessary to place -->
+      <div id="output"></div> <!-- Div that will run the tool, necessary to place -->
+   </div>
+   <div class="DIV-FOOTER"><b>Author:</b>&nbsp;Juan90264 (GitHub)&nbsp;&nbsp;|&nbsp;&nbsp;<b>Powered by GitHub</b></div>
+   <script src="scriptLoadTextSite.js"></script> <!-- File with the tool script, necessary to place -->
+   <script src="../script.js"></script>
+   <script src="../translate.js"></script>
+</body>
+</html>
