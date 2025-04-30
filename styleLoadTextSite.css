@@ -1,0 +1,71 @@
+#output {
+    white-space: pre-wrap;
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 21px;
+}
+
+input#url-input {
+    width: 500px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 8px;
+    outline: 0;
+    font-size: 21px;
+    border: 1px solid #000;
+}
+
+.DIV-INPUT {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.DIV-INPUT > h1 {
+    font-family: Montserrat;
+    font-size: 41px;
+}
+
+.DIV-INPUT > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button#load-btn {
+    width: 120px;
+    height: 50px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 14px;
+    border: 1px solid #000;
+    outline: 0;
+}
+
+button#load-btn:hover {
+    background: #d9d9d9;
+    transition: 0.5s;
+}        
+
+#status {
+    color: #777;
+    margin-top: 5px;
+    font-family: Montserrat;
+    font-size: 21px;
+}
