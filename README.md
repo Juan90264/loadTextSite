@@ -31,7 +31,7 @@ The visible text is recursively extracted and displayed.
 
 * Fallback with hidden iframe: increases the chance of success.
 
-* Supports open CORS via own proxy (https://workercors.jp90264.workers.dev).
+* Supports open CORS via own proxy (https://worker-cors.vercel.app/api/worker).
 
 * No external libraries other than jQuery.
 
