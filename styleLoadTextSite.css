@@ -69,3 +69,11 @@ button#load-btn:hover {
     font-family: Montserrat;
     font-size: 21px;
 }
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
