@@ -70,6 +70,17 @@
          <div>
             <input type="text" id="url-input" placeholder="Digite a URL aqui">
             <button id="load-btn">Carregar Texto</button>
+            <div id="radio-btn" style="margin-top:10px">
+              <label>
+                <input type="radio" name="mode" value="html" checked>
+                Modo HTML (rápido)
+              </label>
+              &nbsp;&nbsp;
+              <label>
+                <input type="radio" name="mode" value="scraper">
+                Modo Scraper (Render)
+              </label>
+            </div>
          </div>
       </div>
       <div id="status"></div> <!-- Div that will run the tool, necessary to place -->
