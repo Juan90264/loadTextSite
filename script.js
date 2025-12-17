@@ -40,6 +40,30 @@ function getVisibleTextFromHTML(html) {
         getVisibleText(doc.body);
         return visibleText.trim();
 }
+
+function loadTextFromScraperAPI(url, container) {
+        container.text('🔄 Scraping externo...');
+    
+        fetch(
+          "https://scrapingrender.onrender.com/scrape?site=" +
+          encodeURIComponent(url)
+        )
+        .then(res => {
+            if (!res.ok) throw new Error("Scraper falhou");
+            return res.json();
+        })
+        .then(data => {
+            if (!data.texto) throw new Error("Texto vazio");
+            container.html(
+              `<b>${url}</b><br><pre>${data.texto}</pre>`
+            );
+        })
+        .catch(err => {
+            container.html(
+              `<b>${url}</b><br>❌ Erro scraper: ${err.message}`
+            );
+        });
+}
     
 function loadVisibleTextFromSite(url, container) {
         container.text('🔄 Carregando...');
@@ -79,7 +103,14 @@ $(document).ready(function() {
             urls.forEach(url => {
                 const siteBox = $('<div class="site-box">🔄 Procurando... </div>');
                 $('#output').append(siteBox);
-                loadVisibleTextFromSite(url, siteBox);
+
+                const mode = $('input[name="mode"]:checked').val();
+
+                if (mode === "scraper") {
+                    loadTextFromScraperAPI(url, siteBox);
+                } else {
+                    loadVisibleTextFromSite(url, siteBox);
+                }
             });
         });
 });
