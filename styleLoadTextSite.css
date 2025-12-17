@@ -63,6 +63,22 @@ button#load-btn:hover {
     transition: 0.5s;
 }        
 
+div#radio-btn {
+    height: 50px;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 14px;
+    outline: 0;
+    font-family: Arial,sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
 #status {
     color: #777;
     margin-top: 5px;
